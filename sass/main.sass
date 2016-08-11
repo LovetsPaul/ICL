@@ -1,5 +1,6 @@
 @import "bourbon"
 @import "vars.sass"
+@import "app/libs/reset-scss/reset.scss"
 @import "app/libs/font-awesome/scss/font-awesome.scss"
 @import "app/libs/animate/animate.sass"
 
@@ -27,17 +28,129 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 body
-	font-size: 16px
+	font-size: 20px
 	min-width: 320px
 	position: relative
-	line-height: 1.6
-	font-family: "RobotoRegular", sans-serif
+	font-family: "CenturyGothicRegular", sans-serif
+	color: $black
 	overflow-x: hidden
+.global-cont
+	position: relative
+	overflow: hidden
+	padding-bottom: 60px
+.top-menu
+	height: 100px
+	-webkit-font-smoothing: antialiased
+	position: relative
+.top-menu__logo
+	font-family: "AlternateGothic", sans-serif
+	font-size: 46px
+	text-transform: uppercase
+	text-decoration: none
+	color: $black
+	display: block
+	position: absolute
+	left: 100px
+	bottom: 0
+.top-menu__nav
+	float: right
+	margin-right: 100px
+	margin-top: 70px
+.top-menu__nav-item
+	float: left
+	margin-left: 63px
+.top-menu__nav-link
+	text-decoration: none
+	color: $black
+	transition: all 0.3s ease
+.top-menu__nav-link:hover
+	color: $grey-text
+.top-menu__nav-link_active
+	color: $grey-text
+.company-img
+	padding-top: 70px
+	position: relative
+	max-width: 810px
+	margin: auto
+	
+.company-img__photo
+	display: block
+	margin: auto
+	max-width: 100%
+	height: auto
+	padding: 0 20px
+	box-sizing: border-box
+.company-img__descr
+	position: absolute
+	text-transform: uppercase
+	font-family: "Aspergit", sans-serif
+	font-size: em(40px)
+	color: $grey
+	font-weight: 100
+.company-img__descr_left
+	left: -70px
+	bottom: 5%
+.company-img__descr_right
+	right: -93px
+	bottom: 29%
 
+
+.particles
+	position: absolute
+	width: 25%
+	height: 100%
+	z-index: -1
+.particles_l
+	top: -31%
+	left: -13%
+	padding-top: 10px
+	transform: rotate(60deg)
+.particles_r
+	bottom: -17%
+	right: -10%
+	transform: rotate(10deg)
+
+.footer
+	min-height: 400px
+	box-sizing: border-box
+	@include linear-gradient($black, #3a3a3a)
+	color: #fff
+	text-align: center
+	padding: 75px 20px 90px
+
+.footer__company-descr
+	font-family: "AlternateGothic", sans-serif
+	font-size: 36px
+	text-transform: uppercase
+	margin-bottom: 130px
+	line-height: 1.1
+.footer__social
+	margin-bottom: 72px
+.footer__social-item
+	color: #1a1a1a
+	font-size: 30px
+	display: inline-block
+	width: 61px
+	height: 61px
+	border: 2px solid $white
+	background-color: $white
+	line-height: 65px
+	border-radius: 10em
+	margin: 0 20px
+	transition: all 0.3s ease-in-out
+.footer__social-item:hover
+	color: $white
+	background-color: transparent
+#f_in
+	margin-left: 4px
+.footer__copyright
+	text-transform: uppercase
+	font-family: "Aparagita", serif
+	font-size: 20px
+	color: $grey-text
 .hidden
 	display: none
 //Custom Styles Here
-
 
 //ALWAYS END
 @import "media"

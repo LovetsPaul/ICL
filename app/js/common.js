@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function(){
 
 	//SVG Fallback
 	if(!Modernizr.svg) {
@@ -37,4 +37,10 @@ $(function() {
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
-});
+	particlesJS.load('particles-js_l', 'js/assets/particlesjs-config-l.json');
+	particlesJS.load('particles-js_r', 'js/assets/particlesjs-config-r.json');
+
+
+})
+
+	
