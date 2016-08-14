@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>ItCreativeLab</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="path/to/image.jpg">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <link rel="stylesheet" href="css/fonts.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <header class="top-header">
+      <div class="top-menu"><a href="/" target="_self" title="itcreativelab" class="top-menu__logo">itcreativelab</a>
+        <nav class="top-menu__nav">
+          <ul class="top-menu__nav-list">
+            <li class="top-menu__nav-item"><a href="#" target="_self" class="top-menu__nav-link">About</a></li>
+            <li class="top-menu__nav-item"><a href="#" target="_self" class="top-menu__nav-link">Services</a></li>
+            <li class="top-menu__nav-item"><a href="#" target="_self" class="top-menu__nav-link">Works</a></li>
+            <li class="top-menu__nav-item"><a href="#" target="_self" class="top-menu__nav-link top-menu__nav-link_active">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="menu__mobile">
+        <div class="top-menu__mobile-btn">
+          <div class="m-button"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </header>
+    <div id="google-map"></div>
+    <div class="contacts">
+      <div class="contacts__heading">
+        <h2>Got a question?<br>Get in touch.</h2>
+      </div>
+      <div class="contacts__main-block">
+        <form class="contacts__main-form">
+          <div class="contacts__block-item">
+            <table class="contacts__info-block">
+              <tr>
+                <td colspan="2" class="contacts__info-title">Contact info</td>
+              </tr>
+              <tr class="contacts__info-item contacts__info-item_tel">
+                <td><span class="contacts__type">Tel:</span></td>
+                <td>+375 29 555-55-55</td>
+              </tr>
+              <tr class="contacts__info-item">
+                <td><span class="contacts__type">E-mail:</span></td>
+                <td>itcreativelab@gmail.com</td>
+              </tr>
+              <tr class="contacts__info-item">
+                <td><span class="contacts__type">Skype:</span></td>
+                <td>itcreativelab</td>
+              </tr>
+              <tr class="contacts__info-item">
+                <td><span class="contacts__type">Address: </span></td>
+                <td>Kozlova Ave, 29a 220000, Minsk</td>
+              </tr>
+            </table>
+          </div>
+          <div class="contacts__block-item">
+            <div class="contacts__form-groups">
+              <div class="contacts__form_item">
+                <label for="person_name">Name*</label>
+                <input type="text" required maxlength="30" name="person_name" id="person_name">
+              </div>
+              <div class="contacts__form_item">
+                <label for="email">E-mail*</label>
+                <input type="text" required maxlength="60" name="email" id="email">
+              </div>
+              <div class="contacts__form_item">
+                <label for="company_name">Company Name</label>
+                <input type="text" maxlength="60" name="company_name" id="company_name">
+              </div>
+            </div>
+          </div>
+          <div class="contacts__block-item">
+            <div class="contacts__form_item">
+              <label for="message">Message*</label>
+              <textarea name="message" id="message" required></textarea>
+            </div>
+          </div>
+          <div class="contacts__block-item contacts__block-item_full">
+            <div class="contacts__button-wrapp">
+              <div class="contacts__form-button_layer">Send message</div>
+              <button type="submit" class="contacts__form-button">Send message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__company-descr">Creative company  in designing and development of sites</div>
+      <div class="footer__social"><a href="#" target="_blank" class="footer__social-item"><i class="fa fa-facebook"></i></a><a href="#" target="_blank" class="footer__social-item"><i class="fa fa-vk"></i></a><a href="#" target="_blank" class="footer__social-item"><i id="f_in" class="fa fa-linkedin"></i></a></div>
+      <div class="footer__copyright">&copy; 2016 ItCreativeLab</div>
+    </footer><!--[if lt IE 9]>
+    <script src="libs/html5shiv/es5-shim.min.js"></script>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    <![endif]-->
+    <script>
+      var scr = {"scripts":[
+      {"src" : "js/libs.js", "async" : false},
+      {"src" : "js/common.js", "async" : false}
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>

@@ -27,6 +27,9 @@ body textarea:focus:required:invalid
 body input:required:valid,
 body textarea:required:valid
 	color: #666
+textarea
+	outline: none
+	overflow: auto
 body
 	font-size: 20px
 	min-width: 320px
@@ -34,16 +37,34 @@ body
 	font-family: "CenturyGothicRegular", sans-serif
 	color: $black
 	overflow-x: hidden
+.top-header
+	position: relative
 .global-cont
 	position: relative
 	overflow: hidden
 	padding-bottom: 60px
 .top-menu
-	height: 100px
+	width: 100%
+	height: 60px
+	line-height: 60px
+	margin-top: 40px
 	-webkit-font-smoothing: antialiased
 	position: relative
+	z-index: 999
+.top-menu_cloned
+	margin-top: 0
+	background-color: $black
+	box-shadow: 0 -1px 7px lighten($black, 40%)
+	transition: top 0.3s ease-in-out
+
+.top-menu_cloned .top-menu__logo,
+.top-menu_cloned .top-menu__nav-link
+	color: $white
+.top-menu_cloned .top-menu__nav-link_active
+	color: $grey-text
 .top-menu__logo
 	font-family: "AlternateGothic", sans-serif
+	line-height: 0.9
 	font-size: 46px
 	text-transform: uppercase
 	text-decoration: none
@@ -51,11 +72,11 @@ body
 	display: block
 	position: absolute
 	left: 100px
-	bottom: 0
+	bottom: 8px
+	user-select: none
 .top-menu__nav
 	float: right
 	margin-right: 100px
-	margin-top: 70px
 .top-menu__nav-item
 	float: left
 	margin-left: 63px
@@ -67,11 +88,35 @@ body
 	color: $grey-text
 .top-menu__nav-link_active
 	color: $grey-text
+.top-menu__mobile_cloned
+	overflow: hidden
+	width: 100%
+	background-color: $black
+	position: fixed
+	top: 0
+	z-index: 9999
+	display: none
+	.top-menu__nav-item
+		display: block
+		margin-left: 0
+		text-align: center
+		width: 100%
+		border-bottom: 1px dotted lighten($black, 25%)
+		.top-menu__nav-link
+			color: $white
+			display: block
+			padding: 13px 0
+			&:hover
+				background-color: lighten($black, 10%)
+
+	
+
 .company-img
 	padding-top: 70px
 	position: relative
 	max-width: 810px
 	margin: auto
+	user-select: none
 	
 .company-img__photo
 	display: block
@@ -142,12 +187,185 @@ body
 	color: $white
 	background-color: transparent
 #f_in
-	margin-left: 4px
+	margin-left: 2px
 .footer__copyright
 	text-transform: uppercase
 	font-family: "Aparagita", serif
 	font-size: 20px
 	color: $grey-text
+#google-map
+	width: 100%
+	height: 350px
+	margin-bottom: 67px
+.contacts__heading
+	font-family: "Swis721", sans-serif
+	text-transform: uppercase
+	font-size: 36px
+	text-align: center
+	font-weight: 100
+	line-height: 65px
+	padding-bottom: 67px
+.contacts__main-block
+	max-width: 1336px
+	width: 100%
+	margin: auto
+	overflow: hidden
+.contacts__block-item
+	float: left
+	width: 27%
+	margin: 0 3%
+.contacts__block-item_full
+	display: block
+	width: 100%
+	margin: auto
+	margin-bottom: 75px
+	margin-top: 45px
+.contacts__info-title
+	font-family: "CenturyGothicRegular", sans-serif
+	text-transform: uppercase
+	font-size: 24px
+	border-bottom: 1px solid lighten($black, 15%)
+	padding-bottom: 7px
+	padding-left: 10px
+.contacts__info-item
+	padding-left: 10px
+	font-family: "CenturyGothicRegular", sans-serif
+	font-size: 20px
+	margin: 16px 0
+	line-height: 1.2
+.contacts__info-item
+	&>td
+		padding: 12px 0
+.contacts__info-item
+	&>td:first-child
+		padding-left: 11px
+.contacts__info-item_tel
+	td
+		padding-top: 30px
+.contacts__type
+	font-family: "CenturyGothicBold", sans-serif
+	padding-right: 30px
+.contacts__block-item input,
+.contacts__block-item textarea
+	width: 100%
+	border: 1px solid lighten($black, 70%)
+	outline: none
+	height: 40px
+	line-height: 40px
+	padding: 5px
+	box-sizing: border-box
+	font-family: "Tahoma", sans-serif
+	font-size: 20px
+	color: $grey-text
+.contacts__block-item input
+	margin-bottom: 25px
+.contacts__block-item #company_name
+	margin-bottom: 0
+.contacts__block-item textarea
+	height: 216px
+.contacts__block-item label
+	display: block
+	margin-bottom: 4px
+	margin-left: 2px
+	font-family: "Tahoma", sans-serif
+	font-size: 20px
+.contacts__main-form
+	overflow: hidden
+.contacts__form-button,
+.contacts__form-button_layer
+	display: block
+	text-align: center
+	overflow: hidden
+	margin: auto
+	width: 240px
+	height: 60px
+	line-height: 60px
+	background-color: $black
+	color: $white
+	font-family: "CenturyGothicBold", sans-serif
+	text-transform: uppercase
+	font-size: 20px
+	border: none
+	outline: none
+	cursor: pointer
+	transform-origin: center bottom
+.contacts__button-wrapp
+	width: 240px
+	height: 60px
+	margin: auto
+	overflow: hidden
+	perspective: 500
+	transform-style: preserve-3d
+.contacts__form-button_layer
+	transition: all 0.3s ease
+	transform: rotateX(0deg)
+
+.contacts__button-wrapp:hover
+	.contacts__form-button_layer
+		transform-origin: center top
+		transition: all 0.3s ease
+		transform: rotateX(90deg)
+	.contacts__form-button
+		transition: all 0.3s ease
+		margin-top: -60px
+
+.contacts__form-button
+
+	margin-top: 0
+	position: relative
+	transition: all 0.3s ease
+	line-height: 60px
+	height: 60px
+	box-sizing: border-box
+	background-color: $white
+	color: $black
+	border: 2px solid $black
+// mobile icon
+.m-button
+  width: 30px
+  height: 20px
+  position: absolute
+  top: 18px
+  right: 100px
+  transform: rotate(0deg)
+  transition: .5s ease-in-out
+  cursor: pointer
+  right: 100px
+  bottom: 18px
+  display: none
+  z-index: 99999999
+
+.m-button span
+  display: block
+  position: absolute
+  height: 2px
+  width: 100%
+  background: $black
+  border-radius: 9px
+  opacity: 1
+  left: 0
+  transform: rotate(0deg)
+  transition: .25s ease-in-out
+
+.m-button
+  span
+    &:nth-child(1)
+      top: 0px
+    &:nth-child(2)
+      top: 9px
+    &:nth-child(3)
+      top: 18px
+  &.open span
+    &:nth-child(1)
+      top: 9px
+      transform: rotate(135deg)
+    &:nth-child(2)
+      opacity: 0
+      left: -60px
+    &:nth-child(3)
+      top: 9px
+      transform: rotate(-135deg)
+//end_mobile-icon
 .hidden
 	display: none
 //Custom Styles Here

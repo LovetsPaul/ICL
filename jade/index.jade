@@ -4,7 +4,7 @@ html(lang='ru', class="no-js")
 	head
 		meta(charset='utf-8')
 
-		title Заголовок
+		title ItCreativeLab
 		meta(name='description', content='')
 		meta(name='keywords', content='')
 
@@ -28,7 +28,7 @@ html(lang='ru', class="no-js")
 		#wrapper.global-cont
 			header.top-header
 				.top-menu
-					a(href="/", target="_self", alt="itcreativelab", class="top-menu__logo")
+					a(href="/", target="_self", title="itcreativelab", class="top-menu__logo")
 						|itcreativelab
 					nav.top-menu__nav
 						ul.top-menu__nav-list
@@ -42,8 +42,14 @@ html(lang='ru', class="no-js")
 								a(href="#", target="_self").top-menu__nav-link
 									|Works
 							li.top-menu__nav-item
-								a(href="#", target="_self").top-menu__nav-link.top-menu__nav-link_active
+								a(href="contacts.html", target="_self").top-menu__nav-link.top-menu__nav-link_active
 									|Contacts
+				.menu__mobile
+					.top-menu__mobile-btn
+						.m-button
+							span
+							span
+							span
 			.company-img
 				img(src="img/itcreativelab_design_develop.png", alt="ItCreativeLab").company-img__photo
 				.company-img__descr.company-img__descr_left
