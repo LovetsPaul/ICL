@@ -9,18 +9,79 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	
+	.top-menu
+		margin-top: 0
 	.top-menu__nav
 		display: none
+	.top-menu__logo
+		left: 50px
 	.m-button
 		display: block
+		right: 50px
 	.menu__mobile
-
+	.company-img__descr
+		font-size: 34px
+	.company-img__descr_left
+		left: 17%
+		bottom: -40px
+	.company-img__descr_right
+		right: 17%
+		bottom: -40px
+	.contacts__main-block
+		margin-bottom: -20px
+	.contacts__block-item
+		width: 44%
+	.contacts__block-item:nth-last-child(2)
+		width: 94%
+		margin-top: 30px
+		label[for='message']
+			text-align: center
+	.contacts__block-item_full
+		width: 100% !important
 
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	#google-map
+		margin-bottom: 50px
+	.contacts__heading
+		font-size: 30px
+		line-height: 40px
+		padding-bottom: 60px
+	.contacts__block-item
+		width: 94%
+		label
+			text-align: left
+			margin-bottom: 7px
+		label[for='message']
+			text-align: left !important
+	.contacts__info-block
+		width: 100%
+		border-bottom: 2px solid lighten($black, 10%)
+	.contacts__info-item
+		
+		td
+			width: 50%
+		td:nth-of-type(odd)
+			text-align: right
+		td:nth-of-type(even)
+			background-color: lighten($black, 20%)
+			color: $white
+			padding-left: 20px
+			padding-right: 20px
+		td:first-child
+			padding-left: 0
+	.contacts__type
+		padding-right: 20px
+	.contacts__info-title
+		text-align: center
+		padding-bottom: 10px
+	.contacts__form-groups
+		margin-top: 40px
+	.contacts__form-item
+		margin-bottom: 10px
+	
 	
 	/*Disable Animation on Mobile Devices*/
 	.animated
@@ -43,11 +104,41 @@
 		-ms-animation: none !important
 		animation: none !important
 
-
+@media only screen and (max-width : 570px)
+	.contacts__info-item
+		font-size: 16px
+	.contacts__type
+		padding-right: 10px
+	.contacts__info-item
+		td:first-child
+			padding-left: 0
+			width: 15%
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
-
+	.global-cont
+		padding-bottom: 70px
+	.top-menu__logo
+		font-size: 36px
+		line-height: 1
+		left: 50px
+	.m-button
+		right: 50px
+		top: 22px
+	.company-img
+		padding-top: 50px
+	.footer__social-item
+		margin: 0 10px
+	.footer__company-descr
+		margin-bottom: 70px
+	.contacts__info-item
+		font-size: 14px
+	.company-img__descr
+		font-size: 22px
+	.contacts__info-item
+		td:nth-of-type(even)
+			padding-left: 10px
+			padding-right: 10px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
