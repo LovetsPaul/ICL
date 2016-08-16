@@ -189,7 +189,14 @@ if ($("#google-map").length > 0) {
 
 $('#about-particle').particleground({
     dotColor: 'rgba(0,0,0,0)',
-    lineColor: 'rgba(0,0,0,0.15)',
+    lineColor: 'rgba(0,0,0,0.22)',
+    denisty: 0,
+    parallaxMultiplier: 6
+});
+
+$('#services-particle').particleground({
+    dotColor: 'rgba(0,0,0,0)',
+    lineColor: 'rgba(255,255,255,0.22)',
     denisty: 0,
     parallaxMultiplier: 6
 });
