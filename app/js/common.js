@@ -167,3 +167,77 @@ if ($("#google-map").length > 0) {
     loadScript();
 
 }
+
+
+
+$('#about-particle').particleground({
+    dotColor: 'rgba(0,0,0,0)',
+    lineColor: 'rgba(0,0,0,0.15)',
+    denisty: 0,
+    parallaxMultiplier: 6
+});
+
+$('.partner-block__owl').owlCarousel({
+
+    
+    loop: true,
+    margin: 40,
+    center: true,
+    autoplay: true,
+    autoWidth: true,
+    items: 5,
+    nav: true,
+    navText: ["", ""],
+    autoplaySpeed: 500,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        500: {
+            items: 3
+        },
+        900: {
+            items: 4
+        },
+        1170: {
+            items: 5
+        }
+    }
+});
+
+
+function first_letter(class_name, span_class){
+
+	$(class_name).each(function(){
+		var txt_full = $(this).text(),
+		t_char = $.trim(txt_full).substring(0, 1),
+		t_substr = $.trim(txt_full).substring(1);
+		char_wrapp = '<span class="' + span_class + '">' + t_char + '</span>';
+		txt_full = char_wrapp + t_substr;
+		$(this).html(txt_full);
+	});
+}
+
+first_letter(".about-text__item", "medium-char");
+
+first_letter(".about-text__important", "large-char");
+///first larfe letter----about
+// $(".about-text__important").each(function(){
+// 	var txt_full = $(this).text(),
+// 	t_char = $.trim(txt_full).substring(0, 1),
+// 	t_substr = $.trim(txt_full).substring(1);
+// 	char_wrapp = '<span class="large-char">' + t_char + '</span>';
+// 	txt_full = char_wrapp + t_substr;
+// 	$(this).html(txt_full);
+// });
+
+// $(".about-text__item").each(function(){
+// 	var txt_full = $(this).text(),
+// 	t_char = $.trim(txt_full).substring(0, 1),
+// 	t_substr = $.trim(txt_full).substring(1);
+// 	char_wrapp = '<span class="medium-char">' + t_char + '</span>';
+// 	txt_full = char_wrapp + t_substr;
+// 	$(this).html(txt_full);
+// });
