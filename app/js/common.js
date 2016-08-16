@@ -17,26 +17,26 @@ $(document).ready(function() {
             data: th.serialize()
         }).done(function() {
 
-        	$("body").append("<div class='popup popup-success'>Спасибо!<br>Ваше сообщение успешно отправлено!</div>").prepend("<div class='popup-overlay'>");
-			$(".popup").slideDown().css({"top": "50%"});
+            $("body").append("<div class='popup popup-success'>Спасибо!<br>Ваше сообщение успешно отправлено!</div>").prepend("<div class='popup-overlay'>");
+            $(".popup").slideDown().css({ "top": "50%" });
             setTimeout(function() {
                 th.trigger("reset");
-               $(".popup").slideDown().css({"top": "-100%"});
+                $(".popup").slideDown().css({ "top": "-100%" });
             }, 2000);
-             setTimeout(function() {
-        	 	$(".popup-overlay").fadeOut();
-        	 	$(".popup").delay(1000).remove();
+            setTimeout(function() {
+                $(".popup-overlay").fadeOut();
+                $(".popup").delay(1000).remove();
             }, 2500);
-        }).error(function(){
+        }).error(function() {
 
-        	$("body").append("<div class='popup popup-error'>Сообщение не отправлено!</div>").prepend("<div class='popup-overlay'>");
-        	$(".popup").slideDown().css({"top": "50%"});
-        	 setTimeout(function() {
-        	 	$(".popup").slideDown().css({"top": "-100%"});
+            $("body").append("<div class='popup popup-error'>Сообщение не отправлено!</div>").prepend("<div class='popup-overlay'>");
+            $(".popup").slideDown().css({ "top": "50%" });
+            setTimeout(function() {
+                $(".popup").slideDown().css({ "top": "-100%" });
             }, 2000);
-        	  setTimeout(function() {
-        	  	$(".popup-overlay").fadeOut();
-        	 	$(".popup").delay(1000).remove();
+            setTimeout(function() {
+                $(".popup-overlay").fadeOut();
+                $(".popup").delay(1000).remove();
             }, 2500);
         });
         return false;
@@ -203,7 +203,7 @@ $('#services-particle').particleground({
 
 $('.partner-block__owl').owlCarousel({
 
-    
+
     loop: true,
     margin: 40,
     center: true,
@@ -232,16 +232,16 @@ $('.partner-block__owl').owlCarousel({
 });
 
 ///first larfe letter----about
-function first_letter(class_name, span_class){
+function first_letter(class_name, span_class) {
 
-	$(class_name).each(function(){
-		var txt_full = $(this).text(),
-		t_char = $.trim(txt_full).substring(0, 1),
-		t_substr = $.trim(txt_full).substring(1);
-		char_wrapp = '<span class="' + span_class + '">' + t_char + '</span>';
-		txt_full = char_wrapp + t_substr;
-		$(this).html(txt_full);
-	});
+    $(class_name).each(function() {
+        var txt_full = $(this).text(),
+            t_char = $.trim(txt_full).substring(0, 1),
+            t_substr = $.trim(txt_full).substring(1);
+        char_wrapp = '<span class="' + span_class + '">' + t_char + '</span>';
+        txt_full = char_wrapp + t_substr;
+        $(this).html(txt_full);
+    });
 }
 
 first_letter(".about-text__item", "medium-char");
