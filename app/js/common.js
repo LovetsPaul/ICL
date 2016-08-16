@@ -8,19 +8,36 @@ $(document).ready(function() {
     };
 
     //E-mail Ajax Send
-    //Documentation & Example: https://github.com/agragregra/uniMail
-    $("form").submit(function() { //Change
+
+    $(".contacts__main-form").submit(function() {
         var th = $(this);
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
+            url: "/mail.php",
             data: th.serialize()
         }).done(function() {
-            alert("Thank you!");
+
+        	$("body").append("<div class='popup popup-success'>Спасибо!<br>Ваше сообщение успешно отправлено!</div>").prepend("<div class='popup-overlay'>");
+			$(".popup").slideDown().css({"top": "50%"});
             setTimeout(function() {
-                // Done Functions
                 th.trigger("reset");
-            }, 1000);
+               $(".popup").slideDown().css({"top": "-100%"});
+            }, 2000);
+             setTimeout(function() {
+        	 	$(".popup-overlay").fadeOut();
+        	 	$(".popup").delay(1000).remove();
+            }, 2500);
+        }).error(function(){
+
+        	$("body").append("<div class='popup popup-error'>Сообщение не отправлено!</div>").prepend("<div class='popup-overlay'>");
+        	$(".popup").slideDown().css({"top": "50%"});
+        	 setTimeout(function() {
+        	 	$(".popup").slideDown().css({"top": "-100%"});
+            }, 2000);
+        	  setTimeout(function() {
+        	  	$(".popup-overlay").fadeOut();
+        	 	$(".popup").delay(1000).remove();
+            }, 2500);
         });
         return false;
     });
@@ -207,7 +224,7 @@ $('.partner-block__owl').owlCarousel({
     }
 });
 
-
+///first larfe letter----about
 function first_letter(class_name, span_class){
 
 	$(class_name).each(function(){
@@ -223,21 +240,3 @@ function first_letter(class_name, span_class){
 first_letter(".about-text__item", "medium-char");
 
 first_letter(".about-text__important", "large-char");
-///first larfe letter----about
-// $(".about-text__important").each(function(){
-// 	var txt_full = $(this).text(),
-// 	t_char = $.trim(txt_full).substring(0, 1),
-// 	t_substr = $.trim(txt_full).substring(1);
-// 	char_wrapp = '<span class="large-char">' + t_char + '</span>';
-// 	txt_full = char_wrapp + t_substr;
-// 	$(this).html(txt_full);
-// });
-
-// $(".about-text__item").each(function(){
-// 	var txt_full = $(this).text(),
-// 	t_char = $.trim(txt_full).substring(0, 1),
-// 	t_substr = $.trim(txt_full).substring(1);
-// 	char_wrapp = '<span class="medium-char">' + t_char + '</span>';
-// 	txt_full = char_wrapp + t_substr;
-// 	$(this).html(txt_full);
-// });
