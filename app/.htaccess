@@ -1,3 +1,5 @@
+AddDefaultCharset UTF-8
+
 <ifModule mod_expires.c>
 
 # Add correct content-type for fonts
