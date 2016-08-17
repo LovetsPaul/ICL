@@ -72,27 +72,40 @@ $(document).ready(function() {
     function stickMenu() {
         var orgElementPos = $('.top-menu_original').offset(),
             orgElementTop = orgElementPos.top,
-            offset = 70;
-
+            offset = 70,
+            black;
         if ($(window).scrollTop() >= (orgElementTop + offset)) {
             var orgElement = $('.top-menu_original'),
+
                 coordsOrgElement = orgElement.offset();
             $('.top-menu_cloned').css('top', 0);
             $('.top-menu_original').css('visibility', 'hidden');
             $('.m-button').css({ "position": "fixed", "right": "100" });
             $('.m-button span').css({ "background-color": '#ffffff' });
+            black = false;
+
+            if ($('.m-button').hasClass("open")) {
+         
+                	$('.m-button span').css({ "background-color": '#ffffff' });
+                	black = false;
+               
+            }
 
 
         } else {
             $('.top-menu_cloned').css('top', '-70px');
             $('.top-menu_original').css('visibility', 'visible');
-            $('.m-button').css({ "position": "absolute" });
-            $(this).css({ "background-color": "#000000" });
-            if ($(this).hasClass("open")) {
-                $('.m-button span').css({ "background-color": '#000000' });
+
+
+			$('.m-button span').css({ "background-color": '#000000' });
+            black = true;
+             if ($('.m-button').hasClass("open")) {
+         
+            	$('.m-button span').css({ "background-color": '#ffffff' });
+            	black = false;
+               
             }
-
-
+            
         }
     }
 
@@ -105,7 +118,7 @@ $('.top-menu__nav-list').clone().insertAfter('.top-menu__mobile-btn').addClass('
 $(document).on('click', '.m-button', function() {
 
     $('.m-button span').css({ "background-color": '#ffffff' });
-    if ($(this).hasClass("open")) {
+    if ($('.m-button').hasClass("open")) {
         $('.m-button').css({ "position": "absolute" });
         $(".top-menu__mobile_cloned").fadeOut();
         $('.m-button span').css({ "background-color": '#000000' });
