@@ -399,7 +399,7 @@ body
 		top: calc(50% - 16px)
 .our_services
 	padding: 75px 0		
-.button-wrapp
+.button
 	width: 240px
 	height: 60px
 	border: 2px solid $black
@@ -412,49 +412,21 @@ body
 	text-align: center
 	cursor: pointer
 	overflow: hidden
-	perspective: 500
-	transform-style: preserve-3d
-	
-	.button
-		transform: rotateX(0deg)
-		transition: all 0.3s ease
-		
-		
-		
+	margin-top: 0
+	z-index: 9999
+	display: block
+	height: 100%
+	line-height: 56px
+	text-align: center
+	color: $black
+	background-color: $white
+	text-decoration: none
+	border: 2px solid $black
+	box-sizing: border-box
+	transition: all 0.3s ease
 	&:hover
-
-		.button
-			
-			
-			transform-origin:  center bottom
-			transform: rotateX(90deg)
-			transition: all 0.3s ease
-			
-		a
-			transform: rotateX(0deg)
-			margin-top: -60px
-			transition: all 0.3s ease
-	a
-		margin-top: 0
-		z-index: 9999
-		display: block
-		height: 100%
-		line-height: 50px
-		transform: rotateX(90deg)
-		text-align: center
-		color: $white
 		background-color: $black
-		text-decoration: none
-		border: 2px solid $black
-		box-sizing: border-box
-		transform-origin: center top
-		transition: all 0.3s ease
-
-
-
-
-
-
+		color: $white
 
 .contacts
 	padding-top: 50px
@@ -538,55 +510,6 @@ body
 	textarea
 		resize: none
 		max-width: 365px
-.contacts__form-button,
-.contacts__form-button_layer
-	display: block
-	text-align: center
-	overflow: hidden
-	margin: auto
-	width: 240px
-	height: 60px
-	line-height: 60px
-	background-color: $black
-	color: $white
-	font-family: "CenturyGothicBold", sans-serif
-	text-transform: uppercase
-	font-size: 20px
-	border: none
-	outline: none
-	cursor: pointer
-	transform-origin: center bottom
-.contacts__button-wrapp
-	width: 240px
-	height: 60px
-	margin: auto
-	overflow: hidden
-	perspective: 500
-	transform-style: preserve-3d
-.contacts__form-button_layer
-	transition: all 0.3s ease
-	transform: rotateX(0deg)
-
-.contacts__button-wrapp:hover
-	.contacts__form-button_layer
-		transform-origin: center top
-		transition: all 0.3s ease
-		transform: rotateX(90deg)
-	.contacts__form-button
-		transition: all 0.3s ease
-		margin-top: -60px
-
-.contacts__form-button
-
-	margin-top: 0
-	position: relative
-	transition: all 0.3s ease
-	line-height: 1
-	height: 60px
-	box-sizing: border-box
-	background-color: $white
-	color: $black
-	border: 2px solid $black
 // mobile icon
 .m-button
 	width: 30px
