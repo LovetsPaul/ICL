@@ -161,9 +161,9 @@ if ($("#google-map").length > 0) {
             latData = Number($("#google-map").data("lat")),
             lngData = Number($("#google-map").data("lng")),
             myLatLng = { lat: latData, lng: lngData },
-            isDraggable = $(document).width() > 768 ? true : false,
+            isDraggable = $(document).width() > 480 ? true : false,
             mapProp = {
-                center: new google.maps.LatLng(53.902930, 27.598150),
+                center: new google.maps.LatLng(myLatLng),
                 zoom: 16,
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 styles: styleArray,
@@ -173,7 +173,7 @@ if ($("#google-map").length > 0) {
             },
 
             map = new google.maps.Map(document.getElementById("google-map"), mapProp),
-            image = '../img/map-marker.png',
+            image = 'img/map-marker.png',
             marker = new google.maps.Marker({
                 position: myLatLng,
                 map: map,

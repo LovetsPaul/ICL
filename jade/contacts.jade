@@ -94,7 +94,9 @@ html(lang='ru', prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: 
                                     span.contacts__type
                                         |Tel:
                                 td
-                                    |+375 29 555-55-55
+                                    |+375 29 555-55-55 
+                                    br
+                                    |+375 33 333-33-33
                             tr.contacts__info-item
                                 td
                                     span.contacts__type
@@ -125,9 +127,9 @@ html(lang='ru', prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: 
                                     |E-mail*
                                 input(type="text", required, maxlength="60", name="email", id="email")
                             .contacts__form_item
-                                label(for="company_name")
-                                    |Company Name
-                                input(type="text", maxlength="60", name="company_name", id="company_name")
+                                label(for="phone_number")
+                                    |Phone
+                                input(type="tel", maxlength="25", name="phone_number", id="phone_number")
 
 
                     .contacts__block-item

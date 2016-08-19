@@ -179,19 +179,19 @@ body
 	color: #1a1a1a
 	font-size: 30px
 	display: inline-block
-	width: 61px
-	height: 61px
-	border: 2px solid $white
+	width: 63px
+	height: 63px
 	background-color: $white
 	line-height: 65px
 	border-radius: 10em
 	margin: 0 20px
 	transition: all 0.3s ease-in-out
 .footer__social-item:hover
-	color: $white
-	background-color: transparent
+	background-color: $grey-text
 #f_in
-	margin-left: 2px
+	position: relative
+	left: 1px
+	top: -2px
 .footer__copyright
 	text-transform: uppercase
 	font-family: "Aparagita", serif
@@ -202,7 +202,7 @@ body
 	height: 350px
 	margin-bottom: 67px
 #about-particle	
-    background-color: rgba(0, 0, 0, 0.035)
+    background-color: $white
 
 #services-particle
 	background-color: $black
@@ -227,8 +227,9 @@ body
 	height: 460px
 	margin-top: -100px
 	z-index: 0
-	border-bottom: 1px solid lighten($black, 90%)
 	position: relative
+	margin-left: auto
+	margin-right: auto
 	&__title
 		position: absolute
 		top: 45%
@@ -253,6 +254,7 @@ body
 	height: 350px
 	margin-top: -415px
 	border-bottom: none
+	max-width: 300px
 .services-wrapp
 	position: relative
 
@@ -473,6 +475,9 @@ body
 	float: left
 	width: 27%
 	margin: 0 3%
+	&:nth-of-type(1)
+		position: relative
+		top: -2px
 .contacts__block-item_full
 	display: block
 	width: 100%
@@ -484,7 +489,7 @@ body
 	text-transform: uppercase
 	font-size: 24px
 	border-bottom: 1px solid lighten($black, 15%)
-	padding-bottom: 7px
+	padding-bottom: 2px
 	padding-left: 10px
 .contacts__info-item
 	padding-left: 10px
@@ -530,6 +535,9 @@ body
 	font-size: 20px
 .contacts__main-form
 	overflow: hidden
+	textarea
+		resize: none
+		max-width: 365px
 .contacts__form-button,
 .contacts__form-button_layer
 	display: block
@@ -573,7 +581,7 @@ body
 	margin-top: 0
 	position: relative
 	transition: all 0.3s ease
-	line-height: 60px
+	line-height: 1
 	height: 60px
 	box-sizing: border-box
 	background-color: $white
