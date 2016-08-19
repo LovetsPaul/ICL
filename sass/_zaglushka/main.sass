@@ -1,0 +1,39 @@
+@import "bourbon"
+@import "vars.sass"
+@import "app/libs/reset-scss/reset.scss"
+
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+textarea
+	outline: none
+	overflow: auto
+body
+	font-size: 20px
+	min-width: 320px
+	position: relative
+	font-family: "CenturyGothicRegular", sans-serif
+	color: $black
+	overflow-x: hidden
+//ALWAYS END
+@import "media"
