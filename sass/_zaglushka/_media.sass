@@ -1,12 +1,123 @@
 @import "app/libs/include-media/dist/_include-media.scss"
 
-@include media('<desktop')
-	
+@include media('>desktop')
+	// #wrapp
+	// 	min-height: 900px
+
+@include media('<1340px')
+	.sidebar
+		&__copy
+			font-size: 19px
+	.main
+		height: auto
+		&__services-item
+			font-size: 14px
+			margin: 0 10px
+
+@include media('<992px')
+	html,
+	body
+		height: auto
+
+	#wrapp
+		overflow-y: auto
+		height: auto
+	.sidebar
+		position: relative
+		width: 100%
+		min-height: auto
+		top: none
+		left: none
+		bottom: none
+		overflow: hidden
+		padding: 40px 20px 20px
+		&__logo
+			display: none
+		&__copy
+			top: none
+			transform: translateY(0)
+			margin-top: 40px
+			position: relative
+			font-size: 16px
+		.contacts
+			transform: translateY(0)
+			width: auto
+			td
+				padding: 0
+				font-size: 14px
+				line-height: 1.5
+				&:nth-of-type(odd)
+					text-align: left
+					padding-right: 20px
+					width: 30px
+
+				&:nth-of-type(even)
+					text-align: center
+
+	.main
+		margin-left: 0
+		height: 600px
+		&__title
+			top: 45px
+			font-size: 34px
+		&__img
+			padding: 0
+			background-position: center 60%
+
+			&-dev
+				right: 23%
+				top: 64%	
+			&-des
+				top: 80%
+				left: 23%	
 
 
-@include media('<tablet')
+@include media('<713px')
+	.main
+		width: 90%
+		margin: auto
+		&__services-item
+			font-size: 10px
+
+@include media('<660px')
+	.main
+		&__img
+			background-size: 60%
+			background-position: center 55%
+			&-dev
+				right: 16%
+				top: 61%	
+			&-des
+				top: 75%
+				left: 18%	
+@include media('<500px')
+	.sidebar
+		&__copy
+			font-size: 14px
+	.main
+		&__title
+			top: 35px
+		&__services-item
+			font-size: 10px
+		&__img
+			background-size: 80%
+			background-position: center 60%
+			&-dev
+				right: 9%
+				top: 65%	
+			&-des
+				top: 80%
+				left: 7%	
 
 
-
-@include media('<phone')
-	
+@include media('<400px')			
+	.contacts
+		margin: auto
+	.main
+		&__img
+			&-dev
+				right: 11%
+				top: 65%	
+			&-des
+				top: 77%
+				left: 10%

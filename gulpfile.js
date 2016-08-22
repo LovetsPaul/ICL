@@ -56,17 +56,12 @@ gulp.task('jade', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src([
-		'./app/libs/modernizr/modernizr.js',
-		'./app/libs/jquery/jquery-1.11.2.min.js',
-		'./app/libs/owl.carousel/owl.carousel.min.js',
-		'./app/libs/particles.js/particles.min.js',
-		'./app/libs/particleground/jquery.particleground.min.js',
-
+		'./app/libs/jquery/jquery-1.11.2.min.js'
 
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js
-		.pipe(gulp.dest('./app/js/'));
+		.pipe(gulp.dest('./app/_zaglushka/js/'));
 });
 
 gulp.task('watch', function () {
@@ -74,8 +69,8 @@ gulp.task('watch', function () {
 	gulp.watch('jade/*.jade', ['jade']);
 	gulp.watch('sass/_zaglushka/*.sass', ['styles']);
 	gulp.watch('jade/_zaglushka/*.jade', ['jade']);
-	gulp.watch('app/libs/**/*.js', ['scripts']);
-	gulp.watch('app/js/*.js').on("change", browserSync.reload);
+	gulp.watch('app/_zaglushka/libs/**/*.js', ['scripts']);
+	gulp.watch('app/_zaglushka/js/*.js').on("change", browserSync.reload);
 	gulp.watch('app/*.html').on('change', browserSync.reload);
 
 	gulp.watch('app/_zaglushka/*.html').on('change', browserSync.reload);

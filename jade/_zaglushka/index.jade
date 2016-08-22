@@ -40,22 +40,70 @@ html(lang='ru', prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: 
         link(rel='icon', type='image/png', sizes='16x16', href='img/favicon/favicon-16x16.png')
         link(rel='manifest', href='img/favicon/manifest.json')
         meta(name='msapplication-TileColor', content='#ffffff')
-        meta(name='msapplication-TileImage', content='img//ms-icon-144x144.png')
+
+        meta(name='msapplication-navbutton-color', content='#ffffff')
+        meta(name='msapplication-TileImage', content='img/favicon/ms-icon-144x144.png')
+        meta(name='apple-mobile-web-app-status-bar-style', content='#ffffff')
         meta(name='theme-color', content='#ffffff')
-    
     
         link(rel='stylesheet', href='css/fonts.min.css')
         link(rel='stylesheet', href='css/main.min.css')
 
     body
+        #wrapp
+           
 
-       
-        // Поддержка старых браузеров
-        <!--[if lt IE 9]>
-        <script src="libs/html5shiv/es5-shim.min.js"></script>
-        <script src="libs/html5shiv/html5shiv.min.js"></script>
-        <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-        <script src="libs/respond/respond.min.js"></script>
-        <![endif]-->
-        
-        
+
+            .main
+                h1.main__title
+                    |Creative company in designing and development of sites
+                .main__img
+                    span.main__img-des
+                        |Design
+                    span.main__img-dev
+                        |Develop
+                ul.main__services
+                    li.main__services-item
+                        |Анализ
+                    li.main__services-item
+                        |Проектирование
+                    li.main__services-item
+                        |Разработка
+                    li.main__services-item
+                        |Внедрение
+                    li.main__services-item
+                        |Тестирование
+                    li.main__services-item
+                        |Поддержка
+
+
+            .sidebar
+                .sidebar__logo
+                    a(href="/", target="_self", class="sidebar__logo-link")
+                        |Itcreativelab
+                table.contacts
+                    tr.contacts__item
+                        td.contacts__type
+                            |Тел:
+                        td.contacts__info
+                            |+375 29 555-55-55
+                            br
+                            |+375 17 111-00-00
+
+                    tr.contacts__item
+                        td.contacts__type
+                            |E-mail:
+                        td.contacts__info
+                            |itcreativelab@gmail.com
+                    tr.contacts__item
+                        td.contacts__type
+                            |Skype:
+                        td.contacts__info
+                            |itcreativelab
+                    tr.contacts__item
+                        td.contacts__type
+                            |Адрес:
+                        td.contacts__info
+                            |Kozlova Ave, 29a 220000, Minsk
+                .sidebar__copy
+                    |&copy; 2016 itcreativelab.by
