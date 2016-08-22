@@ -1,8 +1,6 @@
 @import "app/libs/include-media/dist/_include-media.scss"
 
-@include media('>desktop')
-	// #wrapp
-	// 	min-height: 900px
+
 
 @include media('<1340px')
 	.sidebar
@@ -18,7 +16,6 @@
 	html,
 	body
 		height: auto
-
 	#wrapp
 		overflow-y: auto
 		height: auto
@@ -26,9 +23,6 @@
 		position: relative
 		width: 100%
 		min-height: auto
-		top: none
-		left: none
-		bottom: none
 		overflow: hidden
 		padding: 40px 20px 20px
 		&__logo
@@ -78,6 +72,13 @@
 		margin: auto
 		&__services-item
 			font-size: 10px
+	.sidebar
+		.contacts
+			td
+				&:nth-of-type(odd)
+					padding-left: 10px
+				&:nth-of-type(even)
+					text-align: left
 
 @include media('<660px')
 	.main

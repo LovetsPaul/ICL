@@ -8,7 +8,7 @@ var gulp         = require('gulp'),
 		concat       = require('gulp-concat'),
 		uglify       = require('gulp-uglifyjs');
 
-gulp.task('browser-sync', ['styles', 'scripts', 'jade'], function() {
+gulp.task('browser-sync', ['styles', 'jade'], function() {
 		browserSync.init({
 				server: {
 						baseDir: "./app/_zaglushka"
@@ -54,22 +54,22 @@ gulp.task('jade', function() {
 	.pipe(gulp.dest('app/_zaglushka'));
 });
 
-gulp.task('scripts', function() {
-	return gulp.src([
-		'./app/libs/jquery/jquery-1.11.2.min.js'
+// gulp.task('scripts', function() {
+// 	return gulp.src([
+// 		'./app/libs/jquery/jquery-1.11.2.min.js'
 
-		])
-		.pipe(concat('libs.js'))
-		// .pipe(uglify()) //Minify libs.js
-		.pipe(gulp.dest('./app/_zaglushka/js/'));
-});
+// 		])
+// 		.pipe(concat('libs.js'))
+// 		// .pipe(uglify()) //Minify libs.js
+// 		.pipe(gulp.dest('./app/_zaglushka/js/'));
+// });
 
 gulp.task('watch', function () {
 	gulp.watch('sass/*.sass', ['styles']);
 	gulp.watch('jade/*.jade', ['jade']);
 	gulp.watch('sass/_zaglushka/*.sass', ['styles']);
 	gulp.watch('jade/_zaglushka/*.jade', ['jade']);
-	gulp.watch('app/_zaglushka/libs/**/*.js', ['scripts']);
+	// gulp.watch('app/_zaglushka/libs/**/*.js', ['scripts']);
 	gulp.watch('app/_zaglushka/js/*.js').on("change", browserSync.reload);
 	gulp.watch('app/*.html').on('change', browserSync.reload);
 
